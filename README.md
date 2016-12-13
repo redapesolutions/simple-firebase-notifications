@@ -9,7 +9,7 @@
   - notification.js
 4. node server.js
 5. Open your browser to localhost:3000
-6. Upon opening your browser, the service worker should have installed and automatically sent your browser token to the server. You will need the token to send notifications to your browser
+6. Upon opening your browser, the service worker should have installed and automatically sent your browser token to the server. You will need the token to send notifications to your browser (limited browser support, see limitations below)
 
 
 ### Sending Notifications
@@ -18,8 +18,8 @@
 ```
 curl -X POST --header "Authorization: key=" --Header "Content-Type:application/json" https://fcm.googleapis.com/fcm/send -d "{\"to\":\"\",\"data\":{\"notification\":{\"body\":\"Are you coming to our party?\",\"title\":\"This is a tester tester\",\"confirm\":\"https://developers.google.com/web/\",\"decline\":\"https://www.yahoo.com/\"}},\"priority\":10}"
 ```
-  - making sure to enter your authorization key in the field of 'Authorization: key=' and your browser token in the 'to' field
-  - to ensure your data is passed through, ensure your body looks like:
+  - make sure to enter your authorization key in the field of 'Authorization: key=' and your browser token in the 'to' field
+  - to ensure your data is passed through correctly, ensure your body looks like:
 ```
   "{
       "to": "", //browser token here
@@ -34,3 +34,10 @@ curl -X POST --header "Authorization: key=" --Header "Content-Type:application/j
       "priority": 10
   }"
 ```
+
+### Limitations
+
+According to [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/js/client): The FCM JavaScript API lets you receive notification messages in web apps running in these browsers:
+- Chrome: 50+
+- Firefox: 44+
+- Opera Mobile: 37+

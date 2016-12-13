@@ -1,4 +1,5 @@
 // Initialises firebase
+// TODO: fill in firebase config information
 var config = {
   apiKey: "",
   authDomain: "",
