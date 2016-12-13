@@ -11,8 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "request": "^2.79.0",
-    "superagent": "^3.2.1"
+    "express": "^4.14.0"
   }
 }
