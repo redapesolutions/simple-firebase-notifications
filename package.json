@@ -1,14 +1,14 @@
 {
-  "name": "react-comment-box",
+  "name": "simple-firebase-notifications",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple firebase push notifications web app using Firebase Cloud Messaging (FCM) JavaScript API",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sabrina Tee",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0"
