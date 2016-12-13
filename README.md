@@ -16,9 +16,9 @@
 
 1. curl from your terminal:
 ```
-curl -X POST --header "Authorization: key=" --Header "Content-Type:application/json" https://fcm.googleapis.com/fcm/send -d "{\"to\":\"\",\"data\":{\"notification\":{\"body\":\"Are you coming to our party?\",\"title\":\"This is a tester tester\",\"confirm\":\"https://developers.google.com/web/\",\"decline\":\"https://www.yahoo.com/\"}},\"priority\":10}"
+curl -X POST --header "Authorization: key=[FIREBASE_SERVER_KEY]" --Header "Content-Type:application/json" https://fcm.googleapis.com/fcm/send -d "{\"to\":\"[BROWSER_TOKEN_KEY]\",\"data\":{\"notification\":{\"body\":\"Are you coming to our party?\",\"title\":\"This is a tester tester\",\"confirm\":\"https://developers.google.com/web/\",\"decline\":\"https://www.yahoo.com/\"}},\"priority\":10}"
 ```
-  - make sure to enter your authorization key in the field of 'Authorization: key=' and your browser token in the 'to' field
+  - make sure to enter your [firebase authorization key (your server key)](https://firebase.google.com/docs/cloud-messaging/server#auth) in the field of 'Authorization: key=' and your browser token in the 'to' field (don't include the [])
   - to ensure your data is passed through correctly, ensure your body looks like:
 ```
   "{
